@@ -1,4 +1,5 @@
 # Java Store Inventory Management System
+[Download this repository as a ZIP file](https://github.com/hjoseph777/JavaStoreInventorySystem/archive/refs/heads/main.zip)
 
 ## Project Synopsis
 A comprehensive Java application for managing store inventory, featuring both console and graphical user interfaces. The system handles regular and perishable products, calculates discounts based on product type and expiration dates, and provides robust data persistence through JSON files. Built with a modular architecture, the application demonstrates object-oriented design principles and offers a complete inventory management solution for small to medium businesses.
@@ -376,23 +377,23 @@ This project meets or exceeds all the requirements specified in the course rubri
 
 ### Core Components
 
-| Requirement | Implementation | Source Code Link | Points Possible |
+| Requirement | Implementation | Source Code Link | |
 |-------------|---------------|------------------|-----------------|
-| ✅ **Super class** | `Product` class provides base functionality for all product types | [View Product.java](./store-inventory-system/src/main/java/com/store/model/Product.java) | 3 points (5.45%) |
-| ✅ **Subclasses** | `PerishableProduct` extends Product with expiration handling | [View PerishableProduct.java](./store-inventory-system/src/main/java/com/store/model/PerishableProduct.java) | 5 points (9.09%) |
-| ✅ **Aggregator** | `StoreService` manages product collections & operations | [View StoreService.java](./store-inventory-system/src/main/java/com/store/service/StoreService.java) | 5 points (9.09%) |
-| ✅ **Interface** | `ProductManager` defines core inventory operations | [View ProductManager.java](./store-inventory-system/src/main/java/com/store/service/ProductManager.java) | 5 points (9.09%) |
-| ✅ **Tester Class** | `MainTest` provides comprehensive test coverage | [View MainTest.java](./store-inventory-system/src/test/java/com/store/MainTest.java) | 3 points (5.45%) |
+| ✅ **Super class** | `Product` class provides base functionality for all product types | [View Product.java](./store-inventory-system/src/main/java/com/store/model/Product.java) |  |
+| ✅ **Subclasses** | `PerishableProduct` extends Product with expiration handling | [View PerishableProduct.java](./store-inventory-system/src/main/java/com/store/model/PerishableProduct.java) |  |
+| ✅ **Aggregator** | `StoreService` manages product collections & operations | [View StoreService.java](./store-inventory-system/src/main/java/com/store/service/StoreService.java) |  |
+| ✅ **Interface** | `ProductManager` defines core inventory operations | [View ProductManager.java](./store-inventory-system/src/main/java/com/store/service/ProductManager.java) |  |
+| ✅ **Tester Class** | `MainTest` provides comprehensive test coverage | [View MainTest.java](./store-inventory-system/src/test/java/com/store/MainTest.java) |  |
 
 ### Additional Requirements
 
 | Requirement | Implementation | Points Possible |
 |-------------|---------------|-----------------|
-| ✅ **Packages** | Organized into model, service, gui, and util packages | 4 points (7.27%) |
-| ✅ **Methods** | Comprehensive methods with proper parameters, return types, and implementation | 10 points (18.18%) |
-| ✅ **Correct Results** | All calculations produce accurate results with proper handling of discounts | 10 points (18.18%) |
-| ✅ **Design** | Clean separation of concerns with SOLID principles applied | 5 points (9.09%) |
-| ✅ **Comments** | JavaDoc comments, inline documentation, and consistent naming conventions | 5 points (9.09%) |
+| ✅ **Packages** | Organized into model, service, gui, and util packages |  |
+| ✅ **Methods** | Comprehensive methods with proper parameters, return types, and implementation |  |
+| ✅ **Correct Results** | All calculations produce accurate results with proper handling of discounts |  |
+| ✅ **Design** | Clean separation of concerns with SOLID principles applied | |
+| ✅ **Comments** | JavaDoc comments, inline documentation, and consistent naming conventions | |
 
 ### Total: 55 points (100%)
 
@@ -460,8 +461,7 @@ This project meets or exceeds all the requirements specified in the course rubri
 The application stores data in a JSON file named `inventory.json` located at:
 1. **Location**: 
    - Primary location: `~/.store-inventory/inventory.json` (in the user's home directory)
-   - Fallback location: `src/main/resources/inventory.json`
-
+  
 2. **Persistence**:
    - The file is automatically created if it doesn't exist
    - Data is loaded on application startup
