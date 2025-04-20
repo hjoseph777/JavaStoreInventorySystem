@@ -526,28 +526,12 @@ The application includes comprehensive error handling for:
 - Complex algorithms should include inline comments explaining the approach
 
 ### Testing Guidelines
-- Unit tests should be written for all business logic
-- Each test method should focus on testing one specific behavior
-- Use descriptive method names that explain what is being tested
-- Follow the Arrange-Act-Assert pattern for test structure
+- I wrote unit tests for all the business logic to ensure each component behaved as expected.
+- For each test method, I focused on validating a single, specific behavior to keep things clear and maintainable.
+- I used descriptive method names that clearly indicate what each test is verifying.
+- I followed the Arrange-Act-Assert pattern to structure my tests consistently and improve readability.
 
-### Git Workflow
-```bash
-# Clone the repository
-git clone https://github.com/hJoseph777/JavaStoreInventorySystem.git
 
-# Create a feature branch
-git checkout -b feature/name-of-feature
-
-# Make changes and commit
-git add .
-git commit -m "Descriptive commit message"
-
-# Push changes to remote
-git push origin feature/name-of-feature
-
-# Create pull request on GitHub
-```
 
 ## Project Contributors
 Author 1: [Harry Joseph](https://github.com/hJoseph777)
