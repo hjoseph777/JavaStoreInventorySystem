@@ -535,20 +535,47 @@ The application includes comprehensive error handling for:
 
 
 
-
-```mermaid
-%%{init: {
-  'theme': 'base', 
-  'themeVariables': { 
-    'fontSize': '16px', 
-    'fontFamily': 'arial', 
-    'primaryColor': '#e6f0ff', 
-    'primaryTextColor': '#000', 
-    'lineColor': '#66b2ff',
-    'edgeLabelBackground': '#e6f0ff',
-    'mainBkg': '#e6f0ff'
-  }
-}}%%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inventory Management Class Diagram</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        fontSize: '16px',
+        fontFamily: 'arial',
+        primaryColor: '#e6f0ff',
+        primaryTextColor: '#000',
+        lineColor: '#66b2ff',
+        edgeLabelBackground: '#e6f0ff',
+        mainBkg: '#e6f0ff'
+      }
+    });
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    .mermaid {
+      background: #e6f0ff;
+      border-radius: 12px;
+      padding: 25px;
+      overflow-x: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inventory Management Class Diagram</h1>
+  <div class="mermaid">
 classDiagram
   class Product {
     -String name
@@ -662,8 +689,9 @@ classDiagram
   class AppLauncher switchingModule
 
   note for AppLauncher "Mode Switching Methods:\n+launchConsoleMode() - Terminal Interface\n+launchGUIMode() - JavaFX Interface\n+requestConsoleMode() - Switch from GUI to Console"
-```
-
+  </div>
+</body>
+</html>
 
 
 
