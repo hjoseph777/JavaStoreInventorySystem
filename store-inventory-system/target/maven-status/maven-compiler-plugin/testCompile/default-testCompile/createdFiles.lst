@@ -1,0 +1,6 @@
+com\store\MainTest$PerishableProductTests.class
+com\store\MainTest$ProductTests.class
+com\store\MainTest$StoreServiceTests.class
+com\store\model\AppTest.class
+com\store\service\StoreServiceTest.class
+com\store\MainTest.class
