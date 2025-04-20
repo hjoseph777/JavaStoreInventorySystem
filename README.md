@@ -533,6 +533,219 @@ The application includes comprehensive error handling for:
 
 
 
+
+
+
+```mermaid
+%%{init: {
+  'theme': 'base', 
+  'themeVariables': { 
+    'fontSize': '16px', 
+    'fontFamily': 'arial', 
+    'primaryColor': '#e6f0ff', 
+    'primaryTextColor': '#000', 
+    'lineColor': '#66b2ff',
+    'edgeLabelBackground': '#e6f0ff',
+    'mainBkg': '#e6f0ff'
+  }
+}}%%
+classDiagram
+  class Product {
+    -String name
+    -BigDecimal price
+    -int quantity
+    -BigDecimal discount
+    +Product(String, double, int, double)
+    +getName() String
+    +getPrice() BigDecimal
+    +getQuantity() int
+    +getDiscount() BigDecimal
+    +setName(String) void
+    +setPrice(BigDecimal) void
+    +setQuantity(int) void
+    +setDiscount(BigDecimal) void
+    +getTotalValue() BigDecimal
+    +toString() String
+  }
+  class PerishableProduct {
+    -LocalDate expirationDate
+    +PerishableProduct(String, double, int, String, double)
+    +getExpirationDate() LocalDate
+    +setExpirationDate(LocalDate) void
+    +isExpiringSoon() boolean
+    +getTotalValue() BigDecimal
+    +toString() String
+  }
+  Product <|-- PerishableProduct : extends
+
+  class StoreService {
+    -List~Product~ inventory
+    -ObjectMapper objectMapper
+    -String filePath
+    -static StoreService instance
+    -StoreService()
+    +getInstance() StoreService
+    +loadInventory() void
+    +saveAndCloseInventory() void
+    +addProduct(Product) void
+    +removeProduct(int) void
+    +getInventory() List~Product~
+    +findProductByName(String) Optional~Product~
+    +getTotalQuantity() int
+    +getTotalGrossPrice() BigDecimal
+    +getTotalPriceWithPerishableDiscount() BigDecimal
+    +getTotalNetPriceWithDiscount() BigDecimal
+  }
+
+  class Main {
+    -StoreService storeService
+    -Scanner scanner
+    +main(String[]) void
+    -displayMenu() void
+    -addProduct() void
+    -viewInventory() void
+    -searchProduct() void
+    -displaySummary() void
+    -removeProduct() void
+    -switchToGUIMode() void
+  }
+
+  class AppLauncher {
+    -static boolean consoleMode
+    +main(String[]) void
+    +launch(String[]) void
+    +launchConsoleMode() void
+    +launchGUIMode() void
+    +requestConsoleMode() void
+  }
+
+  class InventoryApp {
+    -StoreService storeService
+    -TableView~Product~ productTable
+    -ObservableList~Product~ productData
+    -TextField nameField, priceField, quantityField, discountField
+    -CheckBox perishableCheckBox
+    -DatePicker expirationDatePicker
+    -Label totalQuantityValue, totalGrossPriceValue, totalPerishablePriceValue, totalNetPriceValue
+    -VBox summaryBox
+    -boolean summaryVisible
+    +start(Stage) void
+    -saveInventory() void
+    -createTopPanel() HBox
+    -createLeftPanel() VBox
+    -createSummarySection() VBox
+    -createCenterPanel() VBox
+    -createStyledColumn() TableColumn
+    -createCurrencyCell() TableCell
+    -createPercentageCell() TableCell
+    -createDateCell() TableCell
+    +showAddProductForm() void
+    +refreshTableData() void
+    +updateSummary() void
+    -showSearchDialog() void
+    -removeSelectedProduct() void
+    -toggleSummaryVisibility() void
+  }
+
+  StoreService "1" --* "0..*" Product : manages
+  Main --> StoreService : uses
+  InventoryApp --> StoreService : uses
+  AppLauncher ..> Main : launches
+  AppLauncher ..> InventoryApp : launches
+
+  classDef consoleMode fill:#e6ffe6,stroke:#004d00,stroke-width:2px
+  classDef guiMode fill:#e6f0ff,stroke:#004080,stroke-width:2px
+  classDef switchingModule fill:#fff5e6,stroke:#cc7a00,stroke-width:2px
+
+  class Main consoleMode
+  class InventoryApp guiMode
+  class AppLauncher switchingModule
+
+  note for AppLauncher "Mode Switching Methods:\n+launchConsoleMode() - Terminal Interface\n+launchGUIMode() - JavaFX Interface\n+requestConsoleMode() - Switch from GUI to Console"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Project Contributors
 Author 1: [Harry Joseph](https://github.com/hJoseph777)
 Author 2: [Trish](https://github.com/trish)
