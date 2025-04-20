@@ -395,7 +395,6 @@ This project meets or exceeds all the requirements specified in the course rubri
 | ✅ **Design** | Clean separation of concerns with SOLID principles applied | |
 | ✅ **Comments** | JavaDoc comments, inline documentation, and consistent naming conventions | |
 
-### Total: 55 points (100%)
 
 ## Features
 
