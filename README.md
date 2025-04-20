@@ -517,14 +517,11 @@ The application includes comprehensive error handling for:
 - **UI classes** are kept separate from business logic to ensure separation of concerns
 
 ### Commenting Standards
-- All classes should include a descriptive class-level JavaDoc comment
-- Public methods must have JavaDoc comments describing:
+- All classes include a descriptive name
+- Public methods have  comments describing:
   - Purpose of the method
   - Parameter descriptions
-  - Return value description
-  - Any exceptions thrown
-- Complex algorithms should include inline comments explaining the approach
-
+ 
 ### Testing Guidelines
 - I wrote unit tests for all the business logic to ensure each component behaved as expected.
 - For each test method, I focused on validating a single, specific behavior to keep things clear and maintainable.
