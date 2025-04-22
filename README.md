@@ -245,7 +245,7 @@ This project meets or exceeds all the requirements specified in the course rubri
 
 ### Additional Requirements
 
-| Requirement | Implementation | Points Possible |
+| Requirement | Implementation |                |
 |-------------|---------------|-----------------|
 | ✅ **Packages** | Organized into model, service, gui, and util packages |  |
 | ✅ **Methods** | Comprehensive methods with proper parameters, return types, and implementation |  |
