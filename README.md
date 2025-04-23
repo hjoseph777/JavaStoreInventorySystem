@@ -392,6 +392,6 @@ The application includes comprehensive error handling for:
 
 # Project Contributors
 Author 1: [Harry Joseph](https://github.com/hJoseph777)
-Author 2: [Trish](https://github.com/trish)
+Author 2: [Trish Figueroa](https://github.com/trish)
 
 
